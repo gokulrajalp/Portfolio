@@ -1,0 +1,51 @@
+#main-header img{
+    height: 100%;
+    width: 100%;
+}
+
+
+@media (max-width: 1200px) {
+  .degree {
+   font-size: 1.8rem;
+  }
+}
+@media (max-width: 1400px) {
+  .degree {
+   font-size: 1.8rem;
+  }
+}
+@media (max-width: 992px) {
+  .degree {
+   font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .degree {
+   font-size: 1.3rem;
+  }
+}
+
+.bg-black{
+    background-color: black;
+}
+
+.port-item{
+    width: 100%;
+}
+
+.port-item:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+@media(min-width: 1199px){
+    .port-item{
+        padding-top: 4.5rem !important;
+        padding-bottom: 4.5rem !important;
+    }
+}
+
+.school{
+    width: 100%;
+}
