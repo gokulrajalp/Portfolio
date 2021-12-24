@@ -26,6 +26,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .port-item{
+    font-size: x-small;
+  }
+}
+
 .bg-black{
     background-color: black;
 }
