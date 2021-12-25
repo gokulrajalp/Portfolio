@@ -33,8 +33,11 @@
   width: 100%;
 }
 
+.contacts a{
+  padding-right: 10px;
+}
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .port-item{
     font-size: x-small;
   }
