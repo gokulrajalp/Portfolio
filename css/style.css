@@ -41,6 +41,9 @@
   .port-item{
     font-size: x-small;
   }
+  .link{
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 992px) {
