@@ -4,33 +4,6 @@
 }
 
 
-@media (max-width: 1200px) {
-  .degree {
-   font-size: 1.8rem;
-  }
-}
-@media (max-width: 1400px) {
-  .degree {
-   font-size: 1.8rem;
-  }
-}
-@media (max-width: 992px) {
-  .degree {
-   font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .degree {
-   font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .port-item{
-    font-size: x-small;
-  }
-}
 
 .bg-black{
     background-color: black;
@@ -45,13 +18,62 @@
     opacity: 0.4;
 }
 
+
+
+.school{
+    width: 100%;
+}
+
+.cgpa{
+  font-size:  medium;
+}
+
+.heading img{
+  height: 100%;
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  .port-item{
+    font-size: x-small;
+  }
+}
+
+@media (max-width: 992px) {
+  .degree {
+   font-size: 1rem;
+  }
+  
+}
+@media (min-width: 992px) {
+  .heading h1{
+    font-size: 2.5rem;
+  }
+  .heading sub{
+    font-size: 1.8rem;
+  }
+  .heading h5{
+    font-size: 2.8rem;
+  }
+  
+}
+
 @media(min-width: 1199px){
     .port-item{
         padding-top: 4.5rem !important;
         padding-bottom: 4.5rem !important;
     }
+    
 }
 
-.school{
-    width: 100%;
+@media (max-width: 1200px) {
+  .degree {
+   font-size: 1.8rem;
+  }
+}
+@media (max-width: 1400px) {
+  .degree {
+   font-size: 1.8rem;
+  }
 }
