@@ -48,7 +48,7 @@
                             <h3 class="display-6 degree">Third year BE Computer Science and Engineering</h3>
                         </div>
                         
-                        <div>
+                        <div class="index">
                             <div class="d-flex flex-row align-items-stretch text-center text-white">
                                 <div class="port-item p-4 bg-primary" data-bs-toggle="collapse" data-bs-target="#home">
                                     <i class="fas fa-home fa-2x"></i>
@@ -268,7 +268,7 @@
     </ul>
 
 </div>
-        
+
 </div>
 
     <h2 class="text-black-50 m-3 mb-3 text-center link"><a href="https://gokulrajalp.github.io/cgpa/" class="text-decoration-none" target="blank"><ttt class="text-black-50">URL :</ttt> https://gokulrajalp.github.io/cgpa/</a></h2>
@@ -305,13 +305,82 @@
 </div>
 
 
-    
-</div>
+
+    </div>
+
+
+
+    <div class="page p1 right bg-success" data-bs-toggle="collapse" data-bs-target="#academic" onclick="index()">&#8618</div>
+
+
+    <div class="page p2 left bg-primary d-none" data-bs-toggle="collapse" data-bs-target="#home" onclick="index()">&#8617</div>
+
+    <div class="page p2 right bg-info d-none" data-bs-toggle="collapse" data-bs-target="#projects" onclick="index()">&#8618</div>
+
+
+    <div class="page p3 left bg-success d-none" data-bs-toggle="collapse" data-bs-target="#academic" onclick="index()">&#8617</div>
+
+    <div class="page p3 right bg-warning d-none" data-bs-toggle="collapse" data-bs-target="#contact" onclick="index()">&#8618</div>
 
     
+    <div class="page p4 left bg-info d-none" data-bs-toggle="collapse" data-bs-target="#projects" onclick="index()">&#8617</div>
 
 
+<script>
 
+function index(){
+    document.querySelector('.index').scrollIntoView();
+}
+
+function tohide(hide){
+    var i = document.querySelectorAll(`.${hide}`);
+
+    i.forEach(tohide => {
+        tohide.classList.add('d-none');
+    });
+}
+
+function toshow(show){
+    var j = document.querySelectorAll(`.${show}`);
+
+    j.forEach(toshow => {
+        toshow.classList.remove('d-none');
+    });
+}
+
+document.querySelector('#home').addEventListener("shown.bs.collapse",function(){
+    toshow("p1");
+    tohide("p2");
+    tohide("p3");
+    tohide("p4");
+});
+
+document.querySelector('#academic').addEventListener("shown.bs.collapse",function(){
+    toshow("p2");
+    tohide("p1");
+    tohide("p3");
+    tohide("p4");
+    
+});
+
+document.querySelector('#projects').addEventListener("shown.bs.collapse",function(){
+    toshow("p3");
+    tohide("p1");
+    tohide("p2");
+    tohide("p4");
+    
+});
+
+document.querySelector('#contact').addEventListener("shown.bs.collapse",function(){
+    toshow("p4");
+    tohide("p1");
+    tohide("p2");
+    tohide("p3");
+    
+});
+
+
+</script>
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -327,7 +396,12 @@
       e.preventDefault();
       $(this).ekkoLightbox();
     });
-        
+       
+    
+    $('.page').click(function () {
+          $('.collapse').collapse('hide');
+        });
+
       </script>
     
 </body>

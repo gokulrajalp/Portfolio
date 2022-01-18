@@ -3,8 +3,6 @@
     width: 100%;
 }
 
-
-
 .bg-black{
     background-color: black;
 }
@@ -35,6 +33,31 @@
 
 .contacts a{
   padding-right: 10px;
+}
+
+
+.page{
+  color: black;
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 40%;
+  width: 2%;
+  position: fixed;
+  top: 50%;
+  bottom: 50%;
+}
+.right{
+  right: 0px;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.left{
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  left: 0px;
 }
 
 @media (max-width: 991px) {
