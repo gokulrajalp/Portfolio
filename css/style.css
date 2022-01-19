@@ -43,7 +43,7 @@
   align-items: center;
   text-align: center;
   height: 40%;
-  width: 2%;
+  width: 3%;
   position: fixed;
   top: 50%;
   bottom: 50%;
@@ -104,5 +104,11 @@
 @media (max-width: 1400px) {
   .degree {
    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebtn {
+   display: none;
   }
 }
