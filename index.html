@@ -291,7 +291,7 @@
 
 <p class="lead">Send a message</p>
 
-<form action="https://gokulrajalp.000webhostapp.com/mail.php" method="post">
+<form name = "contact" action="https://gokulrajalp.000webhostapp.com/mail.php" method="post" onsubmit="return validate()">
     <div class="form-group pb-3">
         <div class="input-group input-group-lg">
             <div class="input-group-prepend">
@@ -299,7 +299,7 @@
                     <i class="fas fa-user fa-2x"></i>
                 </span>
             </div>
-            <input type="text" class="form-control bg-dark text-white" name ="name" placeholder="Name">
+            <input type="text" id = "name" class="form-control bg-dark text-white" name ="name" placeholder="Name">
         </div>
     </div>
 
@@ -311,7 +311,7 @@
                     <i class="fas fa-envelope fa-2x"></i>
                 </span>
             </div>
-            <input type="email" class="form-control bg-dark text-white" name = "email" placeholder="E-Mail ID">
+            <input type="email" id = "email" class="form-control bg-dark text-white" name = "email" placeholder="E-Mail ID">
         </div>
     </div>
 
@@ -323,7 +323,7 @@
                     <i class="fas fa-pencil-alt fa-2x"></i>
                 </span>
             </div>
-            <textarea class="form-control bg-dark text-white" name = "message" placeholder="Message"></textarea>
+            <textarea class="form-control bg-dark text-white" id = "message" name = "message" placeholder="Message"></textarea>
         </div>
     </div>
 <div class="d-grid pb-3">
@@ -371,62 +371,10 @@
     <div class="page p4 left bg-info d-none" data-bs-toggle="collapse" data-bs-target="#projects" onclick="index()"><i class="fas fa-code-branch"></i></div>
 
 </div>
-<script>
-
-function index(){
-    document.querySelector('.index').scrollIntoView();
-}
-
-function tohide(hide){
-    var i = document.querySelectorAll(`.${hide}`);
-
-    i.forEach(tohide => {
-        tohide.classList.add('d-none');
-    });
-}
-
-function toshow(show){
-    var j = document.querySelectorAll(`.${show}`);
-
-    j.forEach(toshow => {
-        toshow.classList.remove('d-none');
-    });
-}
-
-document.querySelector('#home').addEventListener("shown.bs.collapse",function(){
-    toshow("p1");
-    tohide("p2");
-    tohide("p3");
-    tohide("p4");
-});
-
-document.querySelector('#academic').addEventListener("shown.bs.collapse",function(){
-    toshow("p2");
-    tohide("p1");
-    tohide("p3");
-    tohide("p4");
-    
-});
-
-document.querySelector('#projects').addEventListener("shown.bs.collapse",function(){
-    toshow("p3");
-    tohide("p1");
-    tohide("p2");
-    tohide("p4");
-    
-});
-
-document.querySelector('#contact').addEventListener("shown.bs.collapse",function(){
-    toshow("p4");
-    tohide("p1");
-    tohide("p2");
-    tohide("p3");
-    
-});
+ 
 
 
-</script>
-
+    <script src="js/app.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
