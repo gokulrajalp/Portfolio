@@ -291,7 +291,7 @@
 
 <p class="lead">Send a message</p>
 
-<form action="index()">
+<form action="mail.php" method="post">
     <div class="form-group pb-3">
         <div class="input-group input-group-lg">
             <div class="input-group-prepend">
@@ -299,7 +299,7 @@
                     <i class="fas fa-user fa-2x"></i>
                 </span>
             </div>
-            <input type="text" class="form-control bg-dark text-white" placeholder="Name">
+            <input type="text" class="form-control bg-dark text-white" name ="name" placeholder="Name">
         </div>
     </div>
 
@@ -311,7 +311,7 @@
                     <i class="fas fa-envelope fa-2x"></i>
                 </span>
             </div>
-            <input type="email" class="form-control bg-dark text-white" placeholder="E-Mail ID">
+            <input type="email" class="form-control bg-dark text-white" name = "email" placeholder="E-Mail ID">
         </div>
     </div>
 
@@ -323,7 +323,7 @@
                     <i class="fas fa-pencil-alt fa-2x"></i>
                 </span>
             </div>
-            <textarea class="form-control bg-dark text-white" placeholder="Message"></textarea>
+            <textarea class="form-control bg-dark text-white" name = "message" placeholder="Message"></textarea>
         </div>
     </div>
 <div class="d-grid pb-3">
