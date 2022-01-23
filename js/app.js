@@ -5,7 +5,7 @@ if(a === ""){
     alert("Name filed is empty!");
     
     $(function(){
-        $('#name').attr('placeholder',"Type anything (Eg:NA)")
+        $('#name').attr('placeholder',"Enter your Name or Type anything (Eg:NA)")
     });
     return false;
 }
@@ -15,7 +15,7 @@ if(a === ""){
     alert("Email filed is empty!");
 
     $(function(){
-        $('#email').attr('placeholder',"Type anything (Eg:NA)")
+        $('#email').attr('placeholder',"Enter your EmailID or Type anything (Eg:NA)")
     });
     return false;
 }
@@ -26,7 +26,7 @@ if(a === ""){
     alert("Message filed is empty!");
     
     $(function(){
-        $('#message').attr('placeholder',"Type anything (Eg:NA)")
+        $('#message').attr('placeholder',"This field must not empty, type your Message")
     });
     return false;
 }
