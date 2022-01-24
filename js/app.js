@@ -39,8 +39,6 @@ function loading(){
     document.querySelector(`#${load}`).classList.add("show");
 }
 
-
-
 function index(){
     document.querySelector('.index').scrollIntoView();
 }
