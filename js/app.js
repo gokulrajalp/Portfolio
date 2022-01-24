@@ -36,7 +36,13 @@ if(a === ""){
 
 function loading(){
     var load = localStorage.getItem("load");
-    document.querySelector(`#${load}`).classList.add("show");
+    if(!load){
+        document.querySelector('#home').classList.add("show");
+    }
+    else{
+        document.querySelector(`#${load}`).classList.add("show");
+    }
+    
 }
 
 function index(){
