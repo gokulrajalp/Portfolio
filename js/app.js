@@ -15,7 +15,7 @@ if(a === ""){
     alert("Email filed is empty!");
 
     $(function(){
-        $('#email').attr('placeholder',"Enter your EmailID or Type anything (Eg:NA)")
+        $('#email').attr('placeholder',"Enter your EmailID or Type anything (Eg:abc@gmail.com)")
     });
     return false;
 }
@@ -34,6 +34,10 @@ if(a === ""){
 
 }
 
+function loading(){
+    var load = localStorage.getItem("load");
+    document.querySelector(`#${load}`).classList.add("show");
+}
 
 
 
@@ -62,6 +66,7 @@ document.querySelector('#home').addEventListener("shown.bs.collapse",function(){
     tohide("p2");
     tohide("p3");
     tohide("p4");
+    localStorage.setItem("load","home");
 });
 
 document.querySelector('#academic').addEventListener("shown.bs.collapse",function(){
@@ -69,6 +74,7 @@ document.querySelector('#academic').addEventListener("shown.bs.collapse",functio
     tohide("p1");
     tohide("p3");
     tohide("p4");
+    localStorage.setItem("load","academic");
     
 });
 
@@ -77,6 +83,7 @@ document.querySelector('#projects').addEventListener("shown.bs.collapse",functio
     tohide("p1");
     tohide("p2");
     tohide("p4");
+    localStorage.setItem("load","projects");
     
 });
 
@@ -85,5 +92,6 @@ document.querySelector('#contact').addEventListener("shown.bs.collapse",function
     tohide("p1");
     tohide("p2");
     tohide("p3");
+    localStorage.setItem("load","contact");
     
 });
