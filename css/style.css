@@ -112,3 +112,9 @@
    display: none;
   }
 }
+
+@media (max-width: 412px){
+  .social{
+    font-size: 10px;
+  }
+}

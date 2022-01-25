@@ -56,10 +56,10 @@ localStorage.setItem("num",level);
 function loading(){
     var load = localStorage.getItem("load");
     if(!load){
-        document.querySelector('#home').classList.add("show");
+        $('#home').collapse('toggle');
     }
     else{
-        document.querySelector(`#${load}`).classList.add("show");
+        $(`#${load}`).collapse('toggle');
     }
 
     var num = localStorage.getItem("num");
