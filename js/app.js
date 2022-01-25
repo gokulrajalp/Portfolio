@@ -31,6 +31,25 @@ if(a === ""){
     return false;
 }
 
+var name = document.querySelector('#name').value;
+
+
+var email = document.querySelector('#email').value;
+
+
+var message = document.querySelector('#message').value;
+
+var num = localStorage.getItem("num");
+
+var level = parseInt(num);
+
+localStorage.setItem(`name${num}`,name);
+localStorage.setItem(`email${num}`,email);
+localStorage.setItem(`message${num}`,message);
+
+level++;
+
+localStorage.setItem("num",level);
 
 }
 
@@ -42,7 +61,50 @@ function loading(){
     else{
         document.querySelector(`#${load}`).classList.add("show");
     }
+
+    var num = localStorage.getItem("num");
+    if(!num){
+        localStorage.setItem("num",1)
+    }
+
+    var check = parseInt(localStorage.getItem(`num`));
+
+for(var i =1;i<check;i++){
+    var local = localStorage.getItem(`name${i}`);
+    if(local){ 
+        var html = `
+<div class="card pb-5">
+    <div class="card-header bg-warning text-center">
+        <h3>Message</h3>
+    </div>
+    <div class = "card-body bg-dark text-white">
+        <h3>Name : ${localStorage.getItem(`name${i}`)}</h3>
+        <h3>Mail : ${localStorage.getItem(`email${i}`)}</h3>
+        <h3>Message : ${localStorage.getItem(`message${i}`)}</h3>
+    </div>
+    <div class="card-footer bg-success text-center" >
+        <h3>Above message sucessfully sent</h3>
+        <button class = "btn btn-danger" onclick = "remove(${i})">Remove From here</button>
+    </div>
+</div>
+`
+
+document.querySelector('.message').insertAdjacentHTML('afterbegin',html);
+}
+    }
     
+}
+
+
+
+function remove(rem){
+
+    localStorage.removeItem(`name${rem}`);
+    localStorage.removeItem(`email${rem}`);
+    localStorage.removeItem(`message${rem}`);
+    location.reload();
+
+
 }
 
 function index(){
